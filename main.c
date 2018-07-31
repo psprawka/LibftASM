@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <string.h>
+#include <unistd.h>
+#include <stdlib.h>
 
 
 int main()
@@ -10,9 +12,10 @@ int main()
 	char string2[] = "Polcia\0";
 	char string3[] = "Bobo\0";
 	char string4[] = "";
-	char string5[20] = "Hey \0";
-	char string6[] = "Pola\0";
+	char *string5 = malloc(20);
+	char string6[] = "Polcix\0";
 
+	 string5 = "Hey \0";
 	// printf("1. To lower [%c] -> [%c] | [%c] -> [%c]\n", x, ft_tolower(x), '!', ft_tolower('!'));
 	// printf("2. To upper [%c] -> [%c] | [%c] -> [%c]\n", y, ft_toupper(y), '9', ft_toupper('9'));
 	// printf("3. Is alpha [%c] -> [%s] | [%c] -> [%s]\n", x, ft_isalpha(x) ? "true" : "false", '!', ft_isalpha('!') ? "true" : "false");
@@ -60,9 +63,17 @@ int main()
 	// for (int i = 0; i < 5; i++)
 	// 	printf("%c", string3[i]);
 	// printf("]\n");
+	// printf("14. Strcat before:\n[");
+	// for (int i = 0; i < 20; i++)
+	// 	printf("%c", string5[i]);
+	// printf("]\n[");
+	// ft_strcat(string5, string6);
+	// for (int i = 0; i < 20; i++)
+	// 	printf("%c", string5[i]);
+	// printf("]\n");
 
 	printf("14. Strcat before: [%s]\n", string5);
-	ft_strcat(string5, string6);
+	string5 = ft_strcat(string5, string6);
 	printf("Strcat after: [%s]\n", string5);
 	return (0);
 }
