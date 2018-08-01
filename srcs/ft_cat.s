@@ -23,8 +23,6 @@ _ft_read:
 _ft_write:
 	lea rdi, [rbp - 528]
 	call _ft_puts
-	cmp rax, 4
-	je _ft_ret
 	jmp _ft_read
 
 _ft_ret:
