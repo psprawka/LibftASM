@@ -5,6 +5,8 @@
 
 char *ft_strcat(char *s1, char *s2);
 char *ft_strdup(char *s1);
+void ft_cat(int fd);
+int ft_puts(char *str);
 
 int main()
 {
@@ -34,9 +36,11 @@ int main()
 	// for (int i = 0; i < 10; i++)
 	// 	printf("%c", string[i]);
 	// printf("]\n");
-	// printf("9. Puts: [%s]\n", string3);
-	// ft_puts(string3);
-	// ft_puts(string4);
+
+	printf("9. Puts: their [%d] | mine: [%d] | [%s]\n", puts(string3), ft_puts(string3), string3);
+	printf("9. Puts: their [%d] | mine: [%d] | [%s]\n", puts(string4), ft_puts(string4), string4);
+	printf("9. Puts: their [%d] | mine: [%d] | [%s]\n", puts(string6), ft_puts(string6), string6);
+
 	// printf("10. Strlen: [%s] [%d][%d] ", string, strlen(string), ft_strlen(string));
 	// printf("| [%s][%d][%d] ", string2, strlen(string2), ft_strlen(string2));
 	// printf("| [%s][%d][%d] ", string4, strlen(string4), ft_strlen(string4));
@@ -78,9 +82,10 @@ int main()
 	// wtf = ft_strcat(string5, string6);
 	// printf("Strcat after: [%s]\n", wtf);
 
-	printf("15. Strdup before: [%p][%s]\n", string3, string3);
-	wtf = ft_strdup(string3);
-	printf("Strdup after: [%s]\n", wtf);
+	//printf("15. Strdup before: [%p][%s]\n", string3, string3);
+	//wtf = ft_strdup(string3);
+	//printf("Strdup after: [%s]\n", wtf);
+	ft_cat(0);
 	return (0);
 }
 

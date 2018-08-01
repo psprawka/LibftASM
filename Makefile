@@ -17,6 +17,7 @@ FLAGS += -g -Wall -Wextra -Werror
 SRC_DIR 	= srcs/
 
 SRCS = $(SRC_DIR)ft_bzero.s \
+		$(SRC_DIR)ft_cat.s \
 		$(SRC_DIR)ft_isalnum.s \
 		$(SRC_DIR)ft_isalpha.s \
 		$(SRC_DIR)ft_isascii.s \
@@ -26,7 +27,7 @@ SRCS = $(SRC_DIR)ft_bzero.s \
 		$(SRC_DIR)ft_memset.s \
 		$(SRC_DIR)ft_puts.s \
 		$(SRC_DIR)ft_strcat.s \
-    	$(SRC_DIR)ft_strdup.s \
+   	 	$(SRC_DIR)ft_strdup.s \
 		$(SRC_DIR)ft_strlen.s \
 		$(SRC_DIR)ft_tolower.s \
 		$(SRC_DIR)ft_toupper.s \
@@ -34,7 +35,7 @@ SRCS = $(SRC_DIR)ft_bzero.s \
 OBJS += $(SRCS:.s=.o)
 
 BUILD_PRINT = @echo "\r\033[38;5;206m[LIBFTASM] \x1B[38;5;218mBuilding $<"
-DONE = @echo "\033[K\033[1;38;15;LLIBFTASM ready to use!"
+DONE = @echo "\033[K\033[1;38;15;LLIBFTASM ready to use!\033[0m"
 CLEAN_O = @echo "\033[38;5;246mObject files removed! [LIBFTASM]"
 CLEAN_A = @echo "\033[38;5;246mExecutable removed! [LIBFTASM]"
 
