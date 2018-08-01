@@ -3,6 +3,8 @@
 #include <unistd.h>
 #include <stdlib.h>
 
+char *ft_strcat(char *s1, char *s2);
+char *ft_strdup(char *s1);
 
 int main()
 {
@@ -12,10 +14,10 @@ int main()
 	char string2[] = "Polcia\0";
 	char string3[] = "Bobo\0";
 	char string4[] = "";
-	char *string5 = malloc(20);
+	char string5[20] = "Hey \0";
 	char string6[] = "Polcix\0";
+	char *wtf;
 
-	 string5 = "Hey \0";
 	// printf("1. To lower [%c] -> [%c] | [%c] -> [%c]\n", x, ft_tolower(x), '!', ft_tolower('!'));
 	// printf("2. To upper [%c] -> [%c] | [%c] -> [%c]\n", y, ft_toupper(y), '9', ft_toupper('9'));
 	// printf("3. Is alpha [%c] -> [%s] | [%c] -> [%s]\n", x, ft_isalpha(x) ? "true" : "false", '!', ft_isalpha('!') ? "true" : "false");
@@ -72,9 +74,13 @@ int main()
 	// 	printf("%c", string5[i]);
 	// printf("]\n");
 
-	printf("14. Strcat before: [%s]\n", string5);
-	string5 = ft_strcat(string5, string6);
-	printf("Strcat after: [%s]\n", string5);
+	// printf("14. Strcat before: [%s]\n", string5);
+	// wtf = ft_strcat(string5, string6);
+	// printf("Strcat after: [%s]\n", wtf);
+
+	printf("15. Strdup before: [%p][%s]\n", string3, string3);
+	wtf = ft_strdup(string3);
+	printf("Strdup after: [%s]\n", wtf);
 	return (0);
 }
 

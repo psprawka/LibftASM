@@ -6,7 +6,7 @@
 #    By: psprawka <psprawka@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/07/27 17:35:19 by psprawka          #+#    #+#              #
-#    Updated: 2018/07/30 20:21:49 by psprawka         ###   ########.fr        #
+#    Updated: 2018/07/31 19:54:36 by psprawka         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,6 +26,7 @@ SRCS = $(SRC_DIR)ft_bzero.s \
 		$(SRC_DIR)ft_memset.s \
 		$(SRC_DIR)ft_puts.s \
 		$(SRC_DIR)ft_strcat.s \
+    	$(SRC_DIR)ft_strdup.s \
 		$(SRC_DIR)ft_strlen.s \
 		$(SRC_DIR)ft_tolower.s \
 		$(SRC_DIR)ft_toupper.s \

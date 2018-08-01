@@ -3,21 +3,16 @@ section .text
 
 extern _ft_strlen
 extern _ft_memcpy
-extern _ft_puts
 
 _ft_strcat:
-	mov r10, rdi
+	mov r13, rdi
 	call _ft_strlen
-	mov r11, rdi
+	sub rdi, 1
+	mov r12, rdi
 	mov rdi, rsi
-	;mov r11, rdi
-	;call _ft_puts
-	;call _ft_strlen
-	;call _ft_puts
-	mov rdi, r11
+	call _ft_strlen
+	mov rdi, r12
 	mov rdx, rax
-	mov rsi, rdi
-	mov rdi, r11
 	call _ft_memcpy
-	mov rax, r10
-	rep 
+	mov rax, r13
+	ret 
