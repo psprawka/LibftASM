@@ -1,4 +1,4 @@
-# LibftASM - lowel level libft 
+# LibftASM - libc funcions in ASM language 🔧
 
 A set of libftASM functions consist of:
   * bzero
